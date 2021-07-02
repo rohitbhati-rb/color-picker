@@ -7,7 +7,15 @@
   cursor: pointer;
   margin-bottom: -3.5px;
 }
-.copy-button {
+.SingleColorPalette .ColorBox {
+  height: 50%;
+}
+.ColorBox.go-back {
+  background-color: black;
+}
+
+.copy-button,
+.back-btn {
   width: 100px;
   height: 30px;
   position: absolute;
@@ -24,6 +32,9 @@
   color: white;
   text-transform: uppercase;
   border: none;
+  text-decoration: none;
+}
+.copy-button {
   opacity: 0;
 }
 .ColorBox:hover .copy-button {
@@ -54,7 +65,7 @@
   line-height: 30px;
   text-transform: uppercase;
 }
-.copy-overlay{
+.copy-overlay {
   opacity: 0;
   z-index: 0;
   width: 100%;
@@ -62,13 +73,13 @@
   transition: transform 0.6s ease-in-out;
   transform: scale(0.1);
 }
-.copy-overlay.show{
+.copy-overlay.show {
   opacity: 1;
   transform: scale(50);
   z-index: 10;
   position: absolute;
 }
-.copy-message{
+.copy-message {
   position: fixed;
   left: 0;
   top: 0;
@@ -83,14 +94,14 @@
   color: white;
   flex-direction: column;
 }
-.copy-message.show{
+.copy-message.show {
   opacity: 1;
   transform: scale(1);
   z-index: 25;
   transition: all 0.4s ease-in-out;
   transition-delay: 0.3s;
 }
-.copy-message h1{
+.copy-message h1 {
   font-weight: 400;
   text-shadow: 1px 2px black;
   background: rgba(255, 255, 255, 0.2);
@@ -100,7 +111,7 @@
   padding: 1rem;
   text-transform: uppercase;
 }
-.copy-message p{
+.copy-message p {
   font-size: 2rem;
   font-weight: 100;
 }
