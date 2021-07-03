@@ -7,18 +7,8 @@ import ColorBox from './ColorBox';
 import PaletteFooter from './PaletteFooter';
 
 // CSS
-import './css/Palette.css';
+import styles from './css/PaletteStyles';
 
-const styles = {
-  Palette: {
-    height: "100vh",
-    display: "flex",
-    flexDirection: "column"
-  },
-  colors: {
-    height: "90%"
-  }
-};
 
 class Palette extends Component {
   constructor(props) {
