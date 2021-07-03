@@ -6,8 +6,8 @@ import Navbar from './Navbar';
 import ColorBox from './ColorBox';
 import PaletteFooter from './PaletteFooter';
 
-// CSS
-import styles from './css/PaletteStyles';
+// Styles
+import styles from './styles/PaletteStyles';
 
 
 class Palette extends Component {

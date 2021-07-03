@@ -9,7 +9,7 @@ import Slider from 'rc-slider';
 
 // Styles and CSS
 import 'rc-slider/assets/index.css';
-import styles from './css/NavbarStyles';
+import styles from './styles/NavbarStyles';
 
 export class Navbar extends Component {
   constructor(props) {

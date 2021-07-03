@@ -8,7 +8,7 @@ import Navbar from './Navbar';
 import PaletteFooter from './PaletteFooter';
 
 // Styles
-import styles from './css/PaletteStyles';
+import styles from './styles/PaletteStyles';
 
 export class SingleColorPalette extends Component {
   constructor(props) {
