@@ -20,4 +20,5 @@ function DraggableColorBox(props) {
     </div>
   )
 }
+
 export default withStyles(styles)(DraggableColorBox);
