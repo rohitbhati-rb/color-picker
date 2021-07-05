@@ -1,9 +1,31 @@
 import React, { Component } from "react";
+import { withStyles } from "@material-ui/core/styles";
 import { ChromePicker } from "react-color";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 
 // Material UI
 import Button from "@material-ui/core/Button";
+
+const styles = {
+  colorForm: {
+    display: "flex",
+    flexDirection: "column"
+  },
+  picker: {
+    width: "100% !important",
+    marginTop: "2rem"
+  },
+  addColor: {
+    width: "100%",
+    padding: "1rem",
+    marginTop: "1rem",
+    fontSize: "2rem"
+  },
+  colorNameInput: {
+    width: "100%",
+    height: "50px",
+  }
+};
 
 export class ColorPickerForm extends Component {
   constructor(props) {
@@ -42,16 +64,21 @@ export class ColorPickerForm extends Component {
     this.setState({ newColorName: "" });
   }
   render() {
-    const { paletteIsFull } = this.props;
+    const { paletteIsFull, classes } = this.props;
     const { currentColor, newColorName } = this.state;
     return (
       <div>
         <ChromePicker
+          className={classes.picker}
           color={currentColor}
           onChangeComplete={this.updateCurrentColor}
         />
-        <ValidatorForm onSubmit={this.handleSubmit}>
+        <ValidatorForm onSubmit={this.handleSubmit} className={classes.colorForm}>
           <TextValidator
+            placeholder="Color Name"
+            variant="filled"
+            margin="normal"
+            className={classes.colorNameInput}
             name='newColorName'
             value={newColorName}
             onChange={this.handleChange}
@@ -67,6 +94,7 @@ export class ColorPickerForm extends Component {
             ]}
           />
           <Button
+            className={classes.addColor}
             variant="contained"
             color="primary"
             style={{ background: paletteIsFull ? "grey" : currentColor }}
@@ -81,4 +109,4 @@ export class ColorPickerForm extends Component {
   }
 }
 
-export default ColorPickerForm;
+export default withStyles(styles)(ColorPickerForm);

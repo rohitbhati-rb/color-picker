@@ -40,7 +40,10 @@ const styles = theme => ({
     marginRight: 20
   },
   navBtn: {
-
+    display: "flex",
+    "& form":{
+      display: "flex"
+    }
   }
 });
 
