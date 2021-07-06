@@ -1,25 +1,23 @@
 import { DRAWER_WIDTH } from "../constants";
 
-const drawerWidth = DRAWER_WIDTH;
 const styles = theme => ({
     root: {
         display: "flex"
     },
-    hide: {
-        display: "none"
-    },
     drawer: {
-        width: drawerWidth,
+        width: DRAWER_WIDTH,
         flexShrink: 0
     },
     drawerPaper: {
-        width: drawerWidth,
+        width: DRAWER_WIDTH,
         display: "flex",
         alignItems: "center"
     },
     drawerHeader: {
         display: "flex",
         alignItems: "center",
+        // marginLeft: "auto",
+        width: "100%",
         padding: "0 8px",
         ...theme.mixins.toolbar,
         justifyContent: "flex-end"
@@ -27,12 +25,12 @@ const styles = theme => ({
     content: {
         flexGrow: 1,
         height: "calc(100vh - 64px)",
-        padding: theme.spacing(3),
+        padding: "0",
         transition: theme.transitions.create("margin", {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen
         }),
-        marginLeft: -drawerWidth
+        marginLeft: -DRAWER_WIDTH
     },
     contentShift: {
         transition: theme.transitions.create("margin", {

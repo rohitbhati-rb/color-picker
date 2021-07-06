@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
+// Material UI
 import { withStyles } from '@material-ui/styles';
 
 // Components
@@ -8,7 +10,7 @@ import MiniPalette from './MiniPalette';
 // Styles
 import styles from './styles/PaletteListStyles';
 
-export class PaletteList extends Component {
+class PaletteList extends Component {
   goToPalette(id) {
     this.props.history.push(`/palette/${id}`);
   }

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { withStyles } from '@material-ui/styles';
+import Slider from 'rc-slider';
 
-// Components
+// Material UI
+import { withStyles } from '@material-ui/styles';
 import { Select, MenuItem, Snackbar, IconButton } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
-import Slider from 'rc-slider';
 
 // Styles and CSS
 import 'rc-slider/assets/index.css';
 import styles from './styles/NavbarStyles';
 
-export class Navbar extends Component {
+class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = { format: "hex", open: false };

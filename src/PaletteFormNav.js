@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+
+import {
+  CssBaseline,
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton
+} from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import AddToPhotosIcon from "@material-ui/icons/AddToPhotos";
 
-import CssBaseline from "@material-ui/core/CssBaseline";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
-import MenuIcon from "@material-ui/icons/Menu";
-
+// Components
 import PaletteMetaForm from "./PaletteMetaForm";
-
 // Styles
 import styles from './styles/PaletteFormNavStyles'
 
@@ -55,9 +57,11 @@ class PaletteFormNav extends Component {
               color='inherit'
               aria-label='Open drawer'
               onClick={this.props.handleDrawerOpen}
-              className={classNames(classes.menuButton, open && classes.hide)}
+              className={classNames(classes.menuButton, {
+                [classes.hide]: open
+              })}
             >
-              <MenuIcon />
+              <AddToPhotosIcon />
             </IconButton>
             <Typography variant='h6' color='inherit' noWrap>
               Create A Palette

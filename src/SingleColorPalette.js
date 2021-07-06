@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
+//Material UI
 import { withStyles } from '@material-ui/styles';
 
 // Components
@@ -10,7 +12,7 @@ import PaletteFooter from './PaletteFooter';
 // Styles
 import styles from './styles/PaletteStyles';
 
-export class SingleColorPalette extends Component {
+class SingleColorPalette extends Component {
   constructor(props) {
     super(props);
     this.state = { format: "hex" };

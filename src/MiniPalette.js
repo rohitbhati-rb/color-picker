@@ -1,6 +1,7 @@
 import React from 'react';
-import { withStyles } from '@material-ui/styles';
 
+// Material UI
+import { withStyles } from '@material-ui/styles';
 // Styles
 import styles from './styles/MiniPaletteStyles';
 

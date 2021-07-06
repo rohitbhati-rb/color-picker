@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import classNames from "classnames";
-import { withStyles } from "@material-ui/core/styles";
 import arrayMove from 'array-move';
 
-import Drawer from "@material-ui/core/Drawer";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
+// Material UI
+import {
+  Drawer,
+  Typography,
+  Divider,
+  IconButton,
+  Button
+} from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 // Components

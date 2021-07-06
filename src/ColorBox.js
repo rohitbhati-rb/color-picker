@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
+
+// Material UI
 import { withStyles } from '@material-ui/styles';
 
 // Styles
