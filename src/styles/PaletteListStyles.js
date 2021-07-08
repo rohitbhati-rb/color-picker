@@ -1,11 +1,14 @@
+import bg from './bg.svg';
 import sizes from './sizes';
 const styles = {
     root: {
-        backgroundColor: "blue",
         height: "100vh",
         display: "flex",
         alignItems: "flex-start",
-        justifyContent: "center"
+        justifyContent: "center",
+        backgroundColor: "#263E88",
+        backgroundImage: `url(${bg})`,
+        overflow: "scroll"
     },
     container: {
         width: "50%",
@@ -41,8 +44,11 @@ const styles = {
         },
         [sizes.down('xs')]: {
             gridTemplateColumns: "repeat(1, 100%)",
-            gridGap: "1rem"
+            gridGap: "1.5rem"
         }
+    },
+    heading: {
+        fontSize: "2rem"
     }
 };
 export default styles;
