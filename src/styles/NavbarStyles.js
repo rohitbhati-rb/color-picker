@@ -43,7 +43,7 @@ const styles = {
             marginLeft: "-7px !important",
             marginTop: "-3px !important",
         },
-        [sizes.down('md')]: {
+        [sizes.down('sm')]: {
             width: "150px"
         }
     },
