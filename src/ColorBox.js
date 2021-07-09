@@ -38,7 +38,7 @@ class ColorBox extends Component {
           })}>
             <h1>copied!</h1>
             <p className={classes.copyText}>
-              {this.props.background}
+              {background}
             </p>
           </div>
           <div>
