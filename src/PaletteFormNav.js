@@ -41,7 +41,7 @@ class PaletteFormNav extends Component {
     this.setState({ formShowing: false });
   }
   render() {
-    const { classes, open, palettes, handleSubmit, handleDrawerOpen } = this.props;
+    const { classes, open, palettes, handleSubmit, handleDrawerOpen, paletteIsEmpty } = this.props;
     const { formShowing } = this.state;
     return (
       <div className={classes.root}>
@@ -78,7 +78,9 @@ class PaletteFormNav extends Component {
               variant="contained"
               className={classes.button}
               color="primary"
-              onClick={this.showForm}>
+              onClick={this.showForm}
+              disabled={paletteIsEmpty}
+            >
               Save
             </Button>
           </div>

@@ -25,7 +25,8 @@ import styles from './styles/NewPaletteFormStyles';
 
 class NewPaletteForm extends Component {
   static defaultProps = {
-    maxColors: 20
+    maxColors: 20,
+    allColors: seedColors.map(p => p.colors).flat()
   };
   constructor(props) {
     super(props);
@@ -74,10 +75,16 @@ class NewPaletteForm extends Component {
     this.setState({ colors: [] });
   }
   addRandomColor() {
-    const allColors = this.props.palettes.map(p => p.colors).flat();
-    let rand = Math.floor(Math.random() * allColors.length);
-    const randomColor = allColors[rand];
-    this.setState({ colors: [...this.state.colors, randomColor] });
+    const allColors = this.props.allColors;
+    const colors = this.state.colors;
+    let rand, newRandomColor, isDuplicateColor = true;
+    while (isDuplicateColor) {
+      rand = Math.floor(Math.random() * allColors.length);
+      let randomColor = allColors[rand];
+      isDuplicateColor = colors.some(c => c.name === randomColor.name);
+      newRandomColor = randomColor;
+    }
+    this.setState({ colors: [...colors, newRandomColor] });
   }
   onSortEnd = ({ oldIndex, newIndex }) => {
     this.setState(({ colors }) => ({
@@ -88,6 +95,7 @@ class NewPaletteForm extends Component {
     const { classes, maxColors, palettes } = this.props;
     const { open, colors } = this.state;
     const paletteIsFull = colors.length >= maxColors;
+    const paletteIsEmpty = colors.length === 0;
     return (
       <div className={classes.root}>
         <PaletteFormNav
@@ -95,6 +103,7 @@ class NewPaletteForm extends Component {
           palettes={palettes}
           handleSubmit={this.handleSubmit}
           handleDrawerOpen={this.handleDrawerOpen}
+          paletteIsEmpty={paletteIsEmpty}
         />
         <Drawer
           className={classes.drawer}
