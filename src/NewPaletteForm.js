@@ -77,7 +77,6 @@ class NewPaletteForm extends Component {
     let rand = Math.floor(Math.random() * allColors.length);
     const randomColor = allColors[rand];
     this.setState({ colors: [...this.state.colors, randomColor] });
-    console.log(randomColor);
   }
   onSortEnd = ({ oldIndex, newIndex }) => {
     this.setState(({ colors }) => ({
