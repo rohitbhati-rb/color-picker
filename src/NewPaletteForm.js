@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import classNames from "classnames";
 import arrayMove from 'array-move';
+import seedColors from './seedColors';
 
 // Material UI
 import {
@@ -31,7 +32,7 @@ class NewPaletteForm extends Component {
     this.state = {
       open: true,
       newColorName: "",
-      colors: this.props.palettes[0].colors
+      colors: seedColors[0].colors
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
