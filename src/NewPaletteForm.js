@@ -56,7 +56,7 @@ class NewPaletteForm extends Component {
     newPalette.id = newPalette.paletteName.toLowerCase().replace(/ /g, '-');
     newPalette.colors = this.state.colors;
     this.props.savePalette(newPalette);
-    this.props.history.push('/');
+    this.props.history.push('/color-picker');
   }
   handleChange(e) {
     this.setState({

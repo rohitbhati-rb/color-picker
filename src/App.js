@@ -61,7 +61,7 @@ class App extends Component {
               />
               <Route
                 exact
-                path="/"
+                path="/color-picker"
                 render={(routeProps) =>
                   <Page>
                     <PaletteList

@@ -1,5 +1,6 @@
 {
   "name": "color-picker",
+  "homepage": "https://rohitbhati-rb.github.io/color-picker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "array-move": "^3.0.1",
     "chroma-js": "^2.1.2",
     "emoji-mart": "^3.0.1",
+    "gh-pages": "^3.2.3",
     "rc-slider": "^9.7.2",
     "react": "^17.0.2",
     "react-color": "^2.17.2",
@@ -25,6 +27,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
