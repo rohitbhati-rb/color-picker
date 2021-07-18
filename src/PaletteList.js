@@ -5,6 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // Material UI
 import { withStyles } from '@material-ui/styles';
 import {
+  Button,
   Dialog,
   DialogTitle,
   Avatar,
@@ -57,9 +58,11 @@ class PaletteList extends Component {
             <h1 className={classes.heading}>
               React Colors
             </h1>
-            <Link to="/palette/new">
-              Create Palette
-            </Link>
+            <Button variant='contained' color='secondary' >
+              <Link to="/palette/new" style={{ textDecoration: 'none' }}>
+                Create Palette
+              </Link>
+            </Button>
           </nav>
           <TransitionGroup className={classes.palettes}>
             {palettes.map(palette => (

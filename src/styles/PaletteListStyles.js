@@ -20,6 +20,7 @@ const styles = {
         overflow: "scroll"
     },
     container: {
+        // backdropFilter: 'blur(1px)',
         width: "50%",
         display: "flex",
         alignItems: "flex-start",

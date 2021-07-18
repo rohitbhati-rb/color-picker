@@ -49,6 +49,13 @@ const styles = {
             width: "100%",
             height: "10%"
         }
+    },
+    goBackBtn:{
+        borderRadius: '10px',
+        padding: "5px",
+        [sizes.down('xs')]: {
+            padding: '0'
+        }
     }
 };
 export default styles;
